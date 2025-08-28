@@ -1,9 +1,6 @@
 resource "aws_s3_bucket" "main" {
   bucket = "${var.project}-${var.environment}-${var.name}"
-  tags = {
-    Name     = "${var.project}-${var.environment}-${var.name}"
-    Workload = var.workload
-  }
+  tags   = var.tags
 }
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "main" {

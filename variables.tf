@@ -13,10 +13,10 @@ variable "name" {
   description = "Bucket name as suffix project and environment"
 }
 
-variable "workload" {
-  type        = string
-  description = "Workload tag"
-  default     = "default"
+variable "tags" {
+  type        = map(string)
+  description = "A map of tags to assign to the resource."
+  default     = {}
 }
 
 variable "enable_versioning" {
