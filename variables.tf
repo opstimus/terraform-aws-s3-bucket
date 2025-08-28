@@ -13,6 +13,12 @@ variable "name" {
   description = "Bucket name as suffix project and environment"
 }
 
+variable "workload" {
+  type        = string
+  description = "Workload tag"
+  default     = "default"
+}
+
 variable "enable_versioning" {
   type    = bool
   default = true
