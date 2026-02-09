@@ -43,5 +43,9 @@ module "s3_bucket" {
   environment       = "production"
   name              = "data"
   enable_versioning = true
+  tags = {
+    Project = <project-name>
+    Environment = <environment-name>
+  }
 }
 ```
