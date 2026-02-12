@@ -20,3 +20,17 @@ resource "aws_s3_bucket_versioning" "main" {
     status = "Enabled"
   }
 }
+
+resource "aws_s3_bucket_policy" "main" {
+  count  = length(var.bucket_policy) > 0 ? 1 : 0
+  bucket = aws_s3_bucket.main.id
+  policy = var.bucket_policy
+}
+
+resource "aws_s3_bucket_public_access_block" "main" {
+  bucket                  = aws_s3_bucket.main.id
+  block_public_acls       = var.block_public_acls
+  block_public_policy     = var.block_public_policy
+  ignore_public_acls      = var.ignore_public_acls
+  restrict_public_buckets = var.restrict_public_buckets
+}
