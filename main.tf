@@ -22,7 +22,7 @@ resource "aws_s3_bucket_versioning" "main" {
 }
 
 resource "aws_s3_bucket_policy" "main" {
-  count  = length(var.bucket_policy) > 0 ? 1 : 0
+  count  = var.bucket_policy != null ? 1 : 0
   bucket = aws_s3_bucket.main.id
   policy = var.bucket_policy
 }
