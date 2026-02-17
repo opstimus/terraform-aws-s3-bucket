@@ -25,6 +25,8 @@ resource "aws_s3_bucket_policy" "main" {
   count  = var.bucket_policy != null ? 1 : 0
   bucket = aws_s3_bucket.main.id
   policy = var.bucket_policy
+
+  depends_on = [aws_s3_bucket_public_access_block.main]
 }
 
 resource "aws_s3_bucket_public_access_block" "main" {
