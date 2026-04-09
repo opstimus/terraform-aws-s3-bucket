@@ -53,7 +53,7 @@ module "s3_bucket" {
   bucket_namespace  = "global"
   enable_versioning = true
   tags = {
-    Project = "my-project"
+    Project     = "my-project"
     Environment = "production"
   }
 }
