@@ -53,13 +53,11 @@ module "s3_bucket" {
   bucket_namespace  = "global"
   enable_versioning = true
   tags = {
-    Project     = "my-project"
+    Project = "my-project"
     Environment = "production"
   }
 }
 ```
-
-This creates a bucket named `my-project-production-data`.
 
 ### Advanced Usage Example with Custom Policy
 
@@ -90,6 +88,8 @@ module "s3_bucket" {
   }
 }
 ```
+
+This creates a bucket named `my-project-production-data`.
 
 ### Account-Regional Namespace Example
 

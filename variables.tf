@@ -53,9 +53,4 @@ variable "bucket_namespace" {
   type        = string
   description = "Bucket namespace mode. Valid values are account-regional or global."
   default     = "global"
-
-  validation {
-    condition     = contains(["global", "account-regional"], var.bucket_namespace)
-    error_message = "bucket_namespace must be either \"global\" or \"account-regional\"."
-  }
 }
