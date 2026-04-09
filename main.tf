@@ -9,7 +9,7 @@ locals {
     var.environment,
     var.name,
     data.aws_caller_identity.current.account_id,
-    data.aws_region.current.name
+    data.aws_region.current.region
   ) : "${var.project}-${var.environment}-${var.name}"
 }
 
