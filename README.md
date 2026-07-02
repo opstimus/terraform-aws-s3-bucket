@@ -1,3 +1,12 @@
+> ⚠️ **Moved to the monorepo.**
+> This module now lives in [`opstimus/terraform-modules`](https://github.com/opstimus/terraform-modules) at `modules/aws-s3-bucket`.
+>
+> ```hcl
+> source = "git::https://github.com/opstimus/terraform-modules.git//modules/aws-s3-bucket?ref=aws-s3-bucket/v2.2.0"
+> ```
+>
+> This repository remains for existing consumers; new development happens in the monorepo.
+
 # S3 Bucket Module
 
 ## Description
